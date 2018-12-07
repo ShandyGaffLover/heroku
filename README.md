@@ -1,2 +1,2 @@
-# heroku
-herokuにて公開するアプリの配置場所
+# sample001
+Spring Securityによるログインフォーム認証＋RequestHeader認証の実装例。
