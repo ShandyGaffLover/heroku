@@ -13,7 +13,7 @@
 	<h1>login</h1>
 	<p></p>
 
-	<form action="/sample001/login" method="post" >
+	<form action="${pageContext.request.contextPath}/login" method="post" >
         <label for="username">username</label>
         <input type="text" name="username" id="username" placeholder="Input username, please." />
         <br />
