@@ -18,7 +18,6 @@ public class UserDetailsService implements org.springframework.security.core.use
 	@Autowired
 	ResourceLoader resourceLoader;
 
-	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
 		Resource usersCsv = resourceLoader.getResource("classpath:"+"users.csv");
@@ -26,8 +25,10 @@ public class UserDetailsService implements org.springframework.security.core.use
 			BufferedReader br = new BufferedReader(new FileReader(usersCsv.getFile()));
 			String line;
 			while ((line = br.readLine()) != null) {
+				System.out.println(line);
 				String[] userRow = line.split(",", 0);
 				if(StringUtils.equals(username,userRow[0])) {
+					System.out.println(username + " was Found.");
 					return new User(userRow[0], userRow[1], AuthorityUtils.createAuthorityList(userRow[2]));
 				}
 			}
