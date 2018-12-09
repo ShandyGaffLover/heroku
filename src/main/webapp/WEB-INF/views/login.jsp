@@ -11,7 +11,7 @@
 </head>
 <body>
 	<h1>login</h1>
-	<p></p>
+	<p>See <a href="https://qiita.com/ShandyGaffLover/items/73fb131fe70bb0a1e896">How to Login</a>.</p>
 
 	<form action="${pageContext.request.contextPath}/login" method="post" >
         <label for="username">username</label>
